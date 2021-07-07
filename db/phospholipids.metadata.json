@@ -1,1 +1,1 @@
-{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"350b3c41bf934dffa95c00ab66a1c251","collectionName":"phospholipids"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"fd657af2c49647aa969da97d97df22ac","collectionName":"phospholipids"}
