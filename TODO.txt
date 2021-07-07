@@ -1,0 +1,5 @@
+-Add comments
+-Add a requirements.txt
+-Check the code is working by adding in an option to plot the prior
+-Add a README to the github page
+-Add in the code for the other parameters
