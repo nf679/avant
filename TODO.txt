@@ -1,8 +1,7 @@
 -Add comments
 -Add a requirements.txt
--Check the code is working by adding in an option to plot the prior
--Add a README to the github page
+-Add to the README on the github page
 -Add in the code for the other parameters
 -Add labels to database?
 -I think the uniform prior graph needs to be normalised?
--Add plotting code to other parameters
+
