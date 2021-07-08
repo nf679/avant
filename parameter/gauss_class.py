@@ -9,6 +9,7 @@ class Gauss:
     for literature values of a parameter. Can return statistical properties of this distribution and has
     an rvs method to return random variates from the distribution.
     """
+
     def __init__(self, loc_scale, lb, ub):
         # An array of the loc and scale values used to create each Gaussian.
         self.data = loc_scale
@@ -16,14 +17,13 @@ class Gauss:
         self.lb = lb
         self.ub = ub
         self.xrange = np.linspace(self.lb, self.ub, 100)
-        #The weight each Gaussian has in the sum: currently equally weighted.
+        # The weight each Gaussian has in the sum: currently equally weighted.
         self.weight = 1.0 / len(self.data)
         self._pdf_ = []
         # Create arrays from the data
         self.distros = []
         for d in self.data:
             self.distros.append(norm(loc=d[0], scale=d[1]))
-
 
     def pdf(self, x):
         """
@@ -44,13 +44,11 @@ class Gauss:
 
         return _pdf
 
-
     def logpdf(self, x):
         """
         Returns the log of the pdf at x.
         """
         return np.log(self.pdf(x))
-
 
     def cdf(self, x):
         """
@@ -60,7 +58,6 @@ class Gauss:
         for i, d in enumerate(self.distros):
             _cdf += d.cdf(x) * self.weight
         return _cdf
-
 
     def ppf(self, x):
         """
@@ -85,7 +82,6 @@ class Gauss:
 
     def _ppf_root(self, y, x):
         return self.cdf(y) - x
-
 
     def rvs(self, n):
         """

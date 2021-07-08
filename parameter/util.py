@@ -30,7 +30,7 @@ def findGauss(name, parameter):
     data_arr = data.to_numpy(dtype=float)
 
     # get the values for the lower and upper bound of the distribution
-    bounds = findUniform(name,'v_h')
+    bounds = findUniform(name,parameter)
     lb = bounds[0]
     ub = bounds[1]
 
