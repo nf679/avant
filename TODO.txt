@@ -1,9 +1,10 @@
--Make the readme better
--work out how to get the database for other people??
--Add labels to database?
--I think the uniform prior graph needs to be normalised?
--Look at commenting style on other people's code
--Change dh range to something like 2 to 17.5 ?
--check the other ranges too, especially for roughness
 
--Add in data for DPPC?
+-Could probably organise everything better
+-Make the README better
+-work out how to get the database for other people??
+-Add units to database?
+-I think the uniform prior graph needs to be normalised?
+-Look at commenting style on other people's code to make my comments better
+-Check the ranges for the priors
+
+-Add in data for DPPC too?
