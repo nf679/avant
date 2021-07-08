@@ -34,3 +34,8 @@ The following parameters are available in this format:
 
 ![dmpc_vh](https://user-images.githubusercontent.com/53176345/124952482-30ed0080-e00c-11eb-80f7-f1265c9c4d6a.png)
 
+2. Set a parameter equal to the Gauss object (can be used in Refnx) 
+
+       import refl_package.vh as vh
+       x = vh.Gauss('DMPC')
+       
