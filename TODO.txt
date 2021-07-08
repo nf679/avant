@@ -1,4 +1,5 @@
--Add to the README on the github page
+-Make the readme better
+-work out how to get the database for other people??
 -Add labels to database?
 -I think the uniform prior graph needs to be normalised?
 -Look at commenting style on other people's code
