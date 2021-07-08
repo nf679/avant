@@ -1,5 +1,4 @@
 -Add comments
--Add a requirements.txt
 -Add to the README on the github page
 -Add in the code for the other parameters
 -Add labels to database?
