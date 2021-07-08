@@ -4,17 +4,21 @@ from scipy.stats import norm
 
 
 class Gauss:
-
+    """
+    Creates an informed prior probability distribution through a weighted sum of Gaussian distributions
+    for literature values of a parameter. Can return statistical properties of this distribution and has
+    an rvs method to return random variates from the distribution.
+    """
     def __init__(self, loc_scale, lb, ub):
-
+        # An array of the loc and scale values used to create each Gaussian.
         self.data = loc_scale
-        # Set the range for the priors
+        # The xrange to use for the distribution.
         self.lb = lb
         self.ub = ub
         self.xrange = np.linspace(self.lb, self.ub, 100)
+        #The weight each Gaussian has in the sum: currently equally weighted.
         self.weight = 1.0 / len(self.data)
         self._pdf_ = []
-
         # Create arrays from the data
         self.distros = []
         for d in self.data:
@@ -23,11 +27,9 @@ class Gauss:
 
     def pdf(self, x):
         """
-        Loops over the values in the data array to find the gaussian for
-        each value. The gaussians are then added, taking the weight into
-        consideration. If no weight is given in the file the gaussians
-        are summed with equal weighting (i.e. if weight=0.0). The value
-        of the pdf at the x value given is then returned.
+        Loops over the values in the data array to find the gaussian for each value. The Gaussians
+        are then added, taking the weight into consideration. The value of the pdf at the x value
+        given is then returned.
         """
         x = np.atleast_1d(x)
         _pdf = np.zeros_like(x)
@@ -42,11 +44,13 @@ class Gauss:
 
         return _pdf
 
+
     def logpdf(self, x):
         """
         Returns the log of the pdf at x.
         """
         return np.log(self.pdf(x))
+
 
     def cdf(self, x):
         """
@@ -56,6 +60,7 @@ class Gauss:
         for i, d in enumerate(self.distros):
             _cdf += d.cdf(x) * self.weight
         return _cdf
+
 
     def ppf(self, x):
         """
@@ -80,6 +85,7 @@ class Gauss:
 
     def _ppf_root(self, y, x):
         return self.cdf(y) - x
+
 
     def rvs(self, n):
         """

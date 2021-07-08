@@ -1,6 +1,5 @@
--Add comments
--Add to the README on the github page
 -Add in the code for the other parameters
+-Add to the README on the github page
 -Add labels to database?
 -I think the uniform prior graph needs to be normalised?
 -Look at commenting style on other people's code
