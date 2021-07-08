@@ -3,3 +3,4 @@
 -Add labels to database?
 -I think the uniform prior graph needs to be normalised?
 -Look at commenting style on other people's code
+-Change dh range to something like 2 to 17.5 ?
