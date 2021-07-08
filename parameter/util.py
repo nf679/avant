@@ -22,9 +22,7 @@ def findGauss(name, parameter):
     #use this to get the values for lb and ub
     bounds = findUniform(name,'v_h')
     lb = bounds[0]
-    lb = float(lb)
     ub = bounds[1]
-    ub = float(ub)
 
     #INSERT THE ARRAY OF LOCS AND SCALES AND THE LB AND UB INTO GAUSS CLASS
     prior_object = Gauss(data_arr,lb,ub)
@@ -39,7 +37,9 @@ def findUniform(name, parameter):
     cursor = db.uniform.find({'name':name,'parameter':parameter},{"_id":0, "name":0,"parameter":0})
     data = pd.DataFrame(list(cursor))
     lb = data.iat[0,0]
+    lb = float(lb)
     ub = data.iat[0,1]
+    ub = float(ub)
 
     return [lb,ub]
 
