@@ -27,5 +27,6 @@ The following parameters are available in this format:
 
 ## Examples
 
-
+    import refl_package.vh as vh
+    vh.plot('DMPC','Gauss') 
 
