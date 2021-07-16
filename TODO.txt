@@ -2,6 +2,7 @@
 -Format the package
 -Edit the README
 -Look at reading from the BSON files
+-Add in tests
 
 
 -Add units to database?
