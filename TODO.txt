@@ -1,10 +1,10 @@
 
--Could probably organise everything better
--Make the README better
--work out how to get the database for other people??
+-Format the package
+-Edit the README
+-Look at reading from the BSON files
+
+
 -Add units to database?
 -I think the uniform prior graph needs to be normalised?
--Look at commenting style on other people's code to make my comments better
 -Check the ranges for the priors
 
--Add in data for DPPC too?
