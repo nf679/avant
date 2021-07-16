@@ -29,14 +29,14 @@ The following parameters are available in this format:
 
 1. Plotting the informed prior for head volume for DMPC: 
 
-       import refl_package.vh as vh
+       import refl_package.parameter.vh as vh
        vh.plot('DMPC','Gauss') 
 
 ![dmpc_vh](https://user-images.githubusercontent.com/53176345/124952482-30ed0080-e00c-11eb-80f7-f1265c9c4d6a.png)
 
 2. Plotting the uniform prior for the head volume for DMPC:
 
-       import refl_package.vh as vh
+       import refl_package.parameter.vh as vh
        vh.plot('DMPC','uniform')
 
 ![dmpc_vh_u](https://user-images.githubusercontent.com/53176345/124953932-7bbb4800-e00d-11eb-8588-79e88b7f66c3.png)
@@ -45,6 +45,6 @@ The following parameters are available in this format:
 
 3. Set a parameter equal to the Gauss object (can be used in Refnx) 
 
-       import refl_package.vh as vh
+       import refl_package.parameter.vh as vh
        x = vh.Gauss('DMPC')
        
