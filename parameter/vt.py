@@ -31,8 +31,8 @@ def plot(name, type):
     """
     # set the xrange, upper bound and lower bound for the prior
     xrange = uniform(name)
-    lb = xrange[0]
-    ub = xrange[1]
+    lb = xrange[0,0]
+    ub = xrange[0,1]
     xrange = np.linspace(lb, ub, 100)
 
     # plot the Gauss prior

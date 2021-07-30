@@ -1,16 +1,7 @@
-from pymongo import MongoClient
 from .gauss_class import Gauss
 import pandas as pd
+import bson
 
-
-def _connect_mongo():
-    """
-    ***NOT USABLE YET CAUSE I DON'T WANNA PUT THE USERNAME AND PASSWORD ON GITHUB***
-    Connects the user to the database on the Atlas cluster.
-    """
-    mongo_uri = "mongodb+srv://USERNAME:PASSWORD@cluster1.vxinb.mongodb.net/refl_database"
-    conn = MongoClient(mongo_uri)
-    return conn
 
 
 def findGauss(name, parameter):
@@ -19,20 +10,22 @@ def findGauss(name, parameter):
     Input:      name of molecule, parameter to find
     Output:    Gauss prior object containing pdf, logpdf, cdf, ppf and rvs methods
     """
-    # connect to the database
-    client = MongoClient()
-    db = client.refl_database
-    # query the database
-    cursor = db.Gaussian.find({'name':name, 'parameter': parameter},{"_id":0, "loc":1,"scale":1,"xrange":1})
-    # return the query as a pandas DataFrame so the data can be extracted
-    data = pd.DataFrame(list(cursor))
-    # convert the DataFrame to a numpy array so it's in the right format for Gauss class
-    data_arr = data.to_numpy(dtype=float)
+    # Open the bson_file to get the Gaussian data
+    bson_file = open('refl_package/db/Gaussian.bson', 'rb')
+    b = bson.decode_all(bson_file.read())
+    # Turn the data into a pandas dataframe so it can be filtered
+    c = pd.DataFrame(list(b))
+    # Filter the data by the correct name and parameter
+    filtered = c[(c['name'] == name) & (c['parameter'] == parameter)]
+    # Return only the loc and scale columns
+    filtered2 = filtered[['loc', 'scale']]
+    # Convert to numpy array
+    data_arr = filtered2.to_numpy(dtype=float)
 
     # get the values for the lower and upper bound of the distribution
     bounds = findUniform(name,parameter)
-    lb = bounds[0]
-    ub = bounds[1]
+    lb = bounds[0,0]
+    ub = bounds[0,1]
 
     # insert the data into Gauss class to get the prior probability object
     prior_object = Gauss(data_arr,lb,ub)
@@ -46,18 +39,19 @@ def findUniform(name, parameter):
     Input:      name of molecule, parameter of interest
     Output:     array of length [2] with the upper and lower bounds for the uniform prior
     """
-    # connect to the database
-    client = MongoClient()
-    db = client.refl_database
-    # extract the data into a pandas DataFrame object
-    cursor = db.uniform.find({'name':name,'parameter':parameter},{"_id":0, "name":0,"parameter":0})
-    data = pd.DataFrame(list(cursor))
-    # extract the lower and upper bounds as floats
-    lb = data.iat[0,0]
-    lb = float(lb)
-    ub = data.iat[0,1]
-    ub = float(ub)
 
-    return [lb,ub]
+    # Open the bson_file to get the Uniform data
+    bson_file = open('refl_package/db/uniform.bson', 'rb')
+    b = bson.decode_all(bson_file.read())
+    # Turn the data into a pandas dataframe so it can be filtered
+    c = pd.DataFrame(list(b))
+    # Filter the data by the correct name and parameter
+    filtered = c[(c['name'] == name) & (c['parameter'] == parameter)]
+    # Return only the upper and lower bound columns
+    filtered2 = filtered[['lower bound', 'upper bound']]
+    # Convert to numpy array
+    bounds = filtered2.to_numpy(dtype=float)
+
+    return bounds
 
 
