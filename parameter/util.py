@@ -15,6 +15,7 @@ def findGauss(name, parameter):
     b = bson.decode_all(bson_file.read())
     # Turn the data into a pandas dataframe so it can be filtered
     c = pd.DataFrame(list(b))
+    print(c)
     # Filter the data by the correct name and parameter
     filtered = c[(c['name'] == name) & (c['parameter'] == parameter)]
     # Return only the loc and scale columns

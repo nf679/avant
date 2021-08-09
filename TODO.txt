@@ -1,5 +1,4 @@
 
--Look at reading from the BSON files
 -Add in tests
 -Edit the README
 -Finish structuring the package (generating distribution archives etc.)
