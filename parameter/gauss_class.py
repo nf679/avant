@@ -12,7 +12,7 @@ class Gauss:
 
     def __init__(self, loc_scale, lb, ub):
         # An array of the loc and scale values used to create each Gaussian.
-        self.data = loc_scale
+        self.data = np.atleast_2d(loc_scale)
         # The xrange to use for the distribution.
         self.lb = lb
         self.ub = ub
