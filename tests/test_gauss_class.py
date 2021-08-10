@@ -4,7 +4,7 @@ sys.path.append('../')
 import unittest
 import numpy as np
 from scipy.stats import norm
-from numpy.testing import assert_equal, assert_almost_equal
+from numpy.testing import assert_equal, assert_almost_equal, assert_
 from parameter.gauss_class import Gauss
 
 test_norm1 = norm(loc=5.0, scale=1.0)
@@ -40,5 +40,14 @@ class TestGaussClass(unittest.TestCase):
         test_gauss2 = Gauss(loc_scale2, 1.0, 10.0)
         assert_almost_equal(test_gauss2.ppf(0.5), test_norm1.ppf(0.5))
 
+    def test_ppf_root(self):
+        loc_scale2 = np.atleast_2d([(5.0, 1.0)])
+        test_gauss2 = Gauss(loc_scale2, 1.0, 10.0)
+        assert_almost_equal(test_gauss2._ppf_root(5.0,1.0), test_norm1.cdf(5.0) - 1.0)
 
-    #def test_ppf_root(self):
+    def test_rvs(self):
+        loc_scale2 = np.atleast_2d([(5.0, 1.0)])
+        test_gauss2 = Gauss(loc_scale2, 1.0, 10.0)
+        x = test_gauss2.rvs(10)
+        assert_(len(x) == 10)
+
