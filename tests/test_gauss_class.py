@@ -36,5 +36,9 @@ class TestGaussClass(unittest.TestCase):
         assert_almost_equal(test_gauss.cdf(1.0), (0.5 * test_norm1.cdf(1.0)) + (0.5 * test_norm2.cdf(1.0)))
 
     def test_ppf(self):
-        cdf_value = test_gauss.cdf(5.0)
-        assert_almost_equal(test_gauss.ppf(cdf_value), 5.0)
+        loc_scale2 = np.atleast_2d([(5.0, 1.0)])
+        test_gauss2 = Gauss(loc_scale2, 1.0, 10.0)
+        assert_almost_equal(test_gauss2.ppf(0.5), test_norm1.ppf(0.5))
+
+
+    #def test_ppf_root(self):
