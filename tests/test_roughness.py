@@ -6,7 +6,7 @@ from ..parameter.gauss_class import Gauss
 from ..parameter import roughness as r
 
 
-class TestDt(unittest.TestCase):
+class TestRoughness(unittest.TestCase):
 
     def test_Gauss(self):
         a = r.Gauss('DMPC')

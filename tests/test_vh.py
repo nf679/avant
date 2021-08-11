@@ -5,7 +5,7 @@ from ..parameter.gauss_class import Gauss
 from ..parameter import vh as vh
 
 
-class TestDt(unittest.TestCase):
+class TestVh(unittest.TestCase):
 
     def test_Gauss(self):
         a = vh.Gauss('DMPC')
