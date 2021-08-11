@@ -22,7 +22,8 @@ The following parameters are available in this format:
     - **rvs** : random variate sampling
 
 - **uniform(name='DMPC')**: Return an array with a lower and upper bound which can be used for a uniform probability distribution.
-- **plot(name='DMPC',type='uniform')**: Plot either a (type=) 'uniform' or 'Gauss' prior probability distribution. 
+- **plotGauss(name='DMPC')**: Plot a 'Gauss' prior probability distribution. 
+- **plotUniform(name='DMPC')**: Plot a uniform prior probability distribution.
 
 
 ## Examples
