@@ -1,26 +1,24 @@
-import sys
-sys.path.append('../')
 
 import unittest
 import numpy as np
-from scipy.stats import norm
-from numpy.testing import assert_equal, assert_almost_equal, assert_
-from parameter.gauss_class import Gauss
-import parameter.vh as vh
+from numpy.testing import assert_almost_equal
+from ..parameter.gauss_class import Gauss
+from ..parameter import dh as dh
 
 class TestDh(unittest.TestCase):
 
     def test_Gauss(self):
-        a = vh.Gauss('DMPC')
-        loc_scale = np.atleast_2d([(320.9, 20.1), (339.5, 14.5), (319.0, 6.0)])
-        b = Gauss(loc_scale, 250.0, 450.0)
+        a = dh.Gauss('DMPC')
+        loc_scale = np.atleast_2d([(8.0, 1.0), (9.5, 1.6), (8.4, 1.1), (9.0,2.0)])
+        b = Gauss(loc_scale, 4.0, 22.0)
         assert_almost_equal(a.pdf(0.5),b.pdf(0.5))
 
     def test_uniform(self):
-        b = vh.uniform('DMPC')
-        assert_almost_equal(b,np.array([[250.0,450.0]]))
+        b = dh.uniform('DMPC')
+        assert_almost_equal(b,np.array([[4.0,22.0]]))
 
-    def test_plot(self):
+
+
 
 
 

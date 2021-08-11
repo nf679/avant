@@ -11,11 +11,10 @@ def findGauss(name, parameter):
     Output:    Gauss prior object containing pdf, logpdf, cdf, ppf and rvs methods
     """
     # Open the bson_file to get the Gaussian data
-    bson_file = open('refl_package/db/Gaussian.bson', 'rb')
+    bson_file = open('../refl_package/db/Gaussian.bson', 'rb')
     b = bson.decode_all(bson_file.read())
     # Turn the data into a pandas dataframe so it can be filtered
     c = pd.DataFrame(list(b))
-    print(c)
     # Filter the data by the correct name and parameter
     filtered = c[(c['name'] == name) & (c['parameter'] == parameter)]
     # Return only the loc and scale columns
@@ -29,6 +28,7 @@ def findGauss(name, parameter):
     ub = bounds[0,1]
     # insert the data into Gauss class to get the prior probability object
     prior_object = Gauss(data_arr,lb,ub)
+    print(data_arr,lb,ub)
 
     return prior_object
 
@@ -41,7 +41,7 @@ def findUniform(name, parameter):
     """
 
     # Open the bson_file to get the Uniform data
-    bson_file = open('refl_package/db/uniform.bson', 'rb')
+    bson_file = open('../refl_package/db/uniform.bson', 'rb')
     b = bson.decode_all(bson_file.read())
     # Turn the data into a pandas dataframe so it can be filtered
     c = pd.DataFrame(list(b))
