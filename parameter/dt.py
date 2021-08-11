@@ -1,4 +1,4 @@
-from util import findGauss, findUniform
+from .util import findGauss, findUniform
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -23,10 +23,10 @@ def uniform(name):
     return prior
 
 
-def plot(name, type):
+def plotGauss(name):
     """
-    Plots the prior probability distribution for the given molecule.
-    Input:      name of molecule, type of prior (should either be 'Gauss' or 'uniform')
+    Plots the Gauss prior probability distribution for the given molecule.
+    Input:      name of molecule
     Output:     matplotlib.pyplot graph of the given prior
     """
     # set the xrange, upper bound and lower bound for the prior
@@ -36,30 +36,29 @@ def plot(name, type):
     xrange = np.linspace(lb, ub, 100)
 
     # plot the Gauss prior
-    if (type == 'Gauss'):
-        prior = Gauss(name)
-        plt.xlabel('Tail Thickness [Å]')
-        plt.ylabel('pdf')
-        plt.title(name)
-        plt.plot(xrange, prior.pdf(xrange))
-        plt.show()
+    prior = Gauss(name)
+    plt.xlabel('Tail Thickness [Å]')
+    plt.ylabel('pdf')
+    plt.title(name)
+    plt.plot(xrange, prior.pdf(xrange))
+    plt.show()
+
+def plotUniform(name):
+    xrange = uniform(name)
+    lb = xrange[0,0]
+    ub = xrange[0,1]
+    xrange = np.linspace(0.5 * lb, 1.3 * ub, 100)
 
     # plot the uniform prior
-    if (type == 'uniform'):
-        y = np.zeros_like(xrange)
-        xrange = np.linspace(0.5 * lb, 1.3 * ub, 100)
-        for i, j in enumerate(xrange):
-            if (lb <= j <= ub):
-                y[i] = 1.0
-            else:
-                y[i] = 0.0
-        plt.xlabel('Tail Thickness [Å]')
-        plt.ylabel('pdf')
-        plt.title(name)
-        plt.plot(xrange, y)
-        plt.show()
+    y = np.zeros_like(xrange)
 
-
-# Test out the package
-plot('DMPC', 'Gauss')
-plot('DMPC', 'uniform')
+    for i, j in enumerate(xrange):
+        if (lb <= j <= ub):
+            y[i] = 1.0
+        else:
+            y[i] = 0.0
+    plt.xlabel('Tail Thickness [Å]')
+    plt.ylabel('pdf')
+    plt.title(name)
+    plt.plot(xrange, y)
+    plt.show()
