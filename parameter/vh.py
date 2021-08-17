@@ -23,7 +23,7 @@ def uniform(name):
     return prior
 
 
-def plotGauss(name):
+def plotGauss(name): # pragma: no cover
     """
     Plots the Gauss prior probability distribution for the given molecule.
     Input:      name of molecule
@@ -43,7 +43,8 @@ def plotGauss(name):
     plt.plot(xrange, prior.pdf(xrange))
     plt.show()
 
-def plotUniform(name):
+def plotUniform(name): # pragma: no cover
+
     xrange = uniform(name)
     lb = xrange[0,0]
     ub = xrange[0,1]
