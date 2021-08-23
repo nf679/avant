@@ -1,6 +1,25 @@
 # refl_package
 
-A python package to extract values from [refl_database](https://github.com/nf679/refl-database) to create informed or uniform priors to be used in reflectometry analysis.
+**Create informed priors for reflectometry analysis**
+
+
+``refl_package`` is a python package to extract values from [``refl_database``](https://github.com/nf679/refl-database) to create informed or uniform priors to be used in reflectometry analysis.
+
+The aim of ``refl_package`` is to improve reflectometry analysis by applying Bayesian Statistics and creating 'informed priors' which take into account literature values in the prior probability distributions of the parameters. The priors are created in a way where they can be directly implemented in [``Refnx``](https://refnx.readthedocs.io/en/latest) to perform reflectometry analysis. Plus, the package has plotting functionalities so you can see what the prior probability distributions look like. 
+
+## Problems
+
+If you discover any issues with ``refl_package`` feel free to either submit the issue to our issue tracker on [Github](https://github.com/nf679/refl_package), or fix the issue yourself and make a pull request to the main branch. 
+
+## Installation 
+
+INSERT INSTALLATION METHOD HERE ONCE IVE GOT IT ON PYPI OR YOU CAN BUILD / INSTALL WITH SETUP.PY
+
+
+## Contributors
+
+
+
 
 ## refl_package.\<parameter\>
 
