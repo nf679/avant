@@ -7,42 +7,21 @@
 
 The aim of ``refl_package`` is to improve reflectometry analysis by applying Bayesian Statistics and creating 'informed priors' which take into account literature values in the prior probability distributions of the parameters. The priors are created in a way where they can be directly implemented in [``Refnx``](https://refnx.readthedocs.io/en/latest) to perform reflectometry analysis. Plus, the package has plotting functionalities so you can see what the prior probability distributions look like. 
 
-## Problems
+## Features
 
-If you discover any issues with ``refl_package`` feel free to either submit the issue to our issue tracker on [Github](https://github.com/nf679/refl_package), or fix the issue yourself and make a pull request to the main branch. 
+Currently, ``refl_package`` only contains priors for the following five parameters for DMPC: head volume, tail volume, head thickness, tail thickness and roughness. It can create an informed prior, Gauss, with the following methods:     
 
-## Installation 
+- **pdf** : probability distribution function
+- **logpdf** : natural log of the probability distribution function
+- **cdf** : cumulative distribution function
+- **ppf** : percentile point function (quantile function  / inverse cdf)
+- **rvs** : random variate sampling
 
-INSERT INSTALLATION METHOD HERE ONCE IVE GOT IT ON PYPI OR YOU CAN BUILD / INSTALL WITH SETUP.PY
+It can also create a uniform prior which is an upper and lower bound for the prior range. The following plotting functionalities are available:
 
-
-## Contributors
-
-
-
-
-## refl_package.\<parameter\>
-
-The following parameters are available in this format:
-
-- dh:          head thickness
-- dt:          tail thickness
-- roughness:   roughness of the layer
-- vh:          head volume 
-- vt:          tail volume 
-
-### Methods
-
-- **Gauss(name='DMPC')**: Return an informed prior probability object as an object with the following statistical methods:
-    - **pdf** : probability distribution function
-    - **logpdf** : natural log of the probability distribution function
-    - **cdf** : cumulative distribution function
-    - **ppf** : percentile point function (quantile function  / inverse cdf)
-    - **rvs** : random variate sampling
-
-- **uniform(name='DMPC')**: Return an array with a lower and upper bound which can be used for a uniform probability distribution.
 - **plotGauss(name='DMPC')**: Plot a 'Gauss' prior probability distribution. 
 - **plotUniform(name='DMPC')**: Plot a uniform prior probability distribution.
+
 
 
 ## Examples
@@ -67,4 +46,21 @@ The following parameters are available in this format:
 
        import refl_package.parameter.vh as vh
        x = vh.Gauss('DMPC')
+
+## Problems
+
+If you discover any issues with ``refl_package`` feel free to either submit the issue to our issue tracker on [Github](https://github.com/nf679/refl_package), or fix the issue yourself and make a pull request to the main branch. 
+
+## Installation 
+
+INSERT INSTALLATION METHOD HERE ONCE IVE GOT IT ON PYPI OR YOU CAN BUILD / INSTALL WITH SETUP.PY
+
+
+## Contributors
+
+
+
+
+
+
        
