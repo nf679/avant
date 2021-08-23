@@ -59,6 +59,9 @@ INSERT INSTALLATION METHOD HERE ONCE IVE GOT IT ON PYPI OR YOU CAN BUILD / INSTA
 ## Contributors
 
 
+##License
+
+The project is licensed under the MIT license.
 
 
 
