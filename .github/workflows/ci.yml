@@ -22,12 +22,12 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Test with coverage
+      - name: Test with pytest
         run: |
-          coverage run --source=parameter,tests -m pytest
+          pytest
 
-      - name: Coveralls GitHub Action
-        uses: AndreMiras/coveralls-python-action@v20201129
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}};
+      - name: Upload to coveralls
+        run: coveralls
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
