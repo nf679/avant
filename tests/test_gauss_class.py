@@ -1,11 +1,11 @@
-import sys
-sys.path.append('../')
+#import sys
+#sys.path.append('../')
 
 import unittest
 import numpy as np
 from scipy.stats import norm
 from numpy.testing import assert_equal, assert_almost_equal, assert_
-from parameter.gauss_class import Gauss
+from ..parameter.gauss_class import Gauss
 
 test_norm1 = norm(loc=5.0, scale=1.0)
 test_norm2 = norm(loc=6.0, scale=0.5)
