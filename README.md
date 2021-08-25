@@ -4,6 +4,8 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/nf679/refl_package/badge.svg?)](https://coveralls.io/github/nf679/refl_package)
 [![python-ci](https://github.com/nf679/refl_package/actions/workflows/ci.yml/badge.svg)](https://github.com/nf679/refl_package/actions/workflows/ci.yml)
+[![Build status](https://ci.appveyor.com/api/projects/status/lms15ybg66vrp76l?svg=true)](https://ci.appveyor.com/project/nf679/refl-package)
+
 
 ``refl_package`` is a python package to extract values from [``refl_database``](https://github.com/nf679/refl-database) to create informed or uniform priors to be used in reflectometry analysis.
 
