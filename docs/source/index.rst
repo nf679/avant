@@ -4,13 +4,12 @@
    contain the root `toctree` directive.
 
 Create informed priors for reflectometry analysis
-========================================
+=================================================
 
 refl_package is a python package to extract values from refl_database to create informed or uniform priors to be used in reflectometry analysis.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   installation
 
 
 
