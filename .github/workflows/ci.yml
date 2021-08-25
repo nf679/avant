@@ -27,7 +27,8 @@ jobs:
           pytest
 
       - name: Upload to coveralls
-        run: coveralls
+        run: |
+          coveralls --service=github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
