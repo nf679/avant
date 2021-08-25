@@ -5,4 +5,5 @@ pymongo
 scipy
 coverage
 pytest
+coveralls
 
