@@ -27,7 +27,7 @@ jobs:
           coverage run --source=parameter,tests -m pytest
 
       - name: Coveralls GitHub Action
-        uses: AndreMiras/coveralls-python-action@develop
+        uses: AndreMiras/coveralls-python-action@v20201129
         with:
           github-token: ${{secrets.GITHUB_TOKEN}};
 
