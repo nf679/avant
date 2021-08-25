@@ -3,6 +3,6 @@ matplotlib
 pandas
 pymongo
 scipy
-coverage
+coverage[yaml]
 pytest
 
