@@ -4,8 +4,8 @@ sys.path.append('../')
 import unittest
 import numpy as np
 from numpy.testing import assert_equal, assert_almost_equal
-from parameter.gauss_class import Gauss
-from parameter.util import findGauss, findUniform
+from ..parameter.gauss_class import Gauss
+from ..parameter.util import findGauss, findUniform
 
 loc_scale = np.atleast_2d([(320.9, 20.1), (339.5, 14.5),(319.0,6.0)])
 test_gauss = Gauss(loc_scale, 250.0, 450.0)
