@@ -24,10 +24,10 @@ jobs:
 
       - name: Test with coverage
         run: |
-          coverage run --source=parameter,tests -m test
+          coverage run --source=parameter,tests -m pytest
 
       - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@1.1.3
+        uses: AndreMiras/coveralls-python-action@develop
         with:
           github-token: ${{secrets.GITHUB_TOKEN}};
 
