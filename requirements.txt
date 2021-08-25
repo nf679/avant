@@ -3,4 +3,5 @@ matplotlib
 pandas
 pymongo
 scipy
+coverage
 
