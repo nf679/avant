@@ -24,7 +24,7 @@ jobs:
 
       - name: Test with coverage
         run: |
-          coverage run --source=parameter,tests setup.py -m pytest
+          coverage run --source=parameter,tests -m pytest
 
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@1.1.3
