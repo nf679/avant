@@ -6,6 +6,9 @@
 Create informed priors for reflectometry analysis
 =================================================
 
+.. image:: https://coveralls.io/repos/github/nf679/refl_package/badge.svg?branch=main
+:target: https://coveralls.io/github/nf679/refl_package?branch=main
+
 refl_package is a python package to extract values from refl_database to create informed or uniform priors to be used in reflectometry analysis.
 
 .. toctree::
