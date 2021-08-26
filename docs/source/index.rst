@@ -15,3 +15,4 @@ The aim of :py:mod:`refl_package` is to improve reflectometry analysis by applyi
 .. toctree::
    installation
    features
+   examples.ipynb
