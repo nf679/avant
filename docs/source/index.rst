@@ -6,16 +6,8 @@
 Create informed priors for reflectometry analysis
 =================================================
 
-refl_package is a python package to extract values from refl_database to create informed or uniform priors to be used in reflectometry analysis.
+:py:mod:`refl_package` is a python package to extract values from refl_database to create informed or uniform priors to be used in reflectometry analysis.
 
 .. toctree::
    installation
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   
