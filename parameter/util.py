@@ -11,7 +11,7 @@ def findGauss(name, parameter):
     Output:    Gauss prior object containing pdf, logpdf, cdf, ppf and rvs methods
     """
     # Open the bson_file to get the Gaussian data
-    bson_file = open('../refl_package/db/Gaussian.bson', 'rb')
+    bson_file = open('../avant/db/Gaussian.bson', 'rb')
     b = bson.decode_all(bson_file.read())
     # Turn the data into a pandas dataframe so it can be filtered
     c = pd.DataFrame(list(b))
@@ -41,7 +41,7 @@ def findUniform(name, parameter):
     """
 
     # Open the bson_file to get the Uniform data
-    bson_file = open('../refl_package/db/uniform.bson', 'rb')
+    bson_file = open('../avant/db/uniform.bson', 'rb')
     b = bson.decode_all(bson_file.read())
     # Turn the data into a pandas dataframe so it can be filtered
     c = pd.DataFrame(list(b))
