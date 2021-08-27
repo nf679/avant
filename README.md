@@ -59,7 +59,12 @@ If you discover any issues with ``refl_package`` feel free to either submit the 
 
 ## Installation 
 
-INSERT INSTALLATION METHOD HERE ONCE IVE GOT IT ON PYPI OR YOU CAN BUILD / INSTALL WITH SETUP.PY
+``refl_package`` is available on PyPI so can be installed using pip, otherwise this repository can be cloned and the latest build can be installed using the following:
+
+    pip install -r requirements.txt
+    python setup.py build
+    python setup.py install
+    pytest
 
 
 ## Contributors
