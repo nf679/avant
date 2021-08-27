@@ -4,14 +4,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="refl-package",
+    name="avant",
     version = "0.0.1",
     author="Nicola Farmer",
     author_email="nkf679@gmail.com",
     description="A Python package to create informed prior probability distributions for reflectometry analysis",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/nf679/refl_package",
+    url="https://github.com/nf679/avant",
     project_urls={
         "docs": "https://refl-package.readthedocs.io/en/latest/",
     },
