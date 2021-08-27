@@ -4,7 +4,7 @@
 Features
 =============================
 
-Currently, :py:mod:`refl_package` only contains priors for the following five parameters for DMPC: head volume, tail volume, head thickness, tail thickness and roughness. It can create an informed prior, *Gauss*, with the following methods:
+Currently, :py:mod:`avant` only contains priors for the following five parameters for DMPC: head volume, tail volume, head thickness, tail thickness and roughness. It can create an informed prior, *Gauss*, with the following methods:
 
 * **pdf**: probability distribution function
 * **logpdf**: natural log of the probability distribution function
