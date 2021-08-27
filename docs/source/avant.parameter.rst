@@ -1,7 +1,7 @@
-refl_package.parameter
+avant.parameter
 =======================
 
-.. automodule:: refl_package.parameter
+.. automodule:: avant.parameter
     :members:
     :undoc-members:
     :show-inheritance:
