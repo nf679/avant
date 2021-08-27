@@ -5,7 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/nf679/avant/badge.svg?branch=main)](https://coveralls.io/github/nf679/avant?branch=main)
 [![python-ci](https://github.com/nf679/avant/actions/workflows/ci.yml/badge.svg)](https://github.com/nf679/avant/actions/workflows/ci.yml)
 [![Build status](https://ci.appveyor.com/api/projects/status/78evhjkd9hj2lx72?svg=true)](https://ci.appveyor.com/project/nf679/avant)
-[![Documentation Status](https://readthedocs.org/projects/refl-package/badge/?version=latest)](https://refl-package.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/avant/badge/?version=latest)](https://avant.readthedocs.io/en/latest/?badge=latest)
 
 
 
