@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/nf679/avant",
     project_urls={
-        "docs": "https://refl-package.readthedocs.io/en/latest/",
+        "docs": "https://avant.readthedocs.io/en/latest/",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
