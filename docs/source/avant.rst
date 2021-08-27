@@ -1,4 +1,4 @@
-refl_package - Creating informed priors for reflectometry analysis in Python
+avant - Creating informed priors for reflectometry analysis in Python
 =============================================================================
 
 Modules
@@ -6,4 +6,4 @@ Modules
 
 .. toctree::
 
-   refl_package.parameter
+   avant.parameter
