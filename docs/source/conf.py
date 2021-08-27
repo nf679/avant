@@ -17,12 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'refl_package'
+project = 'avant'
 copyright = '2021, Nicola Farmer'
 author = 'Nicola Farmer'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = '0.0.1'
 
 
 # -- General configuration ---------------------------------------------------
